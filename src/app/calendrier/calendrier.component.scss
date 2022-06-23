@@ -1,0 +1,333 @@
+/* ---------- FONTAWESOME ---------- */
+
+
+/* ---------- https://fortawesome.github.com/Font-Awesome/ ---------- */
+
+
+/* ---------- http://weloveiconfonts.com/ ---------- */
+
+*[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+
+/* ---------- GENERAL ---------- */
+
+body {
+    background: #f9f9f9;
+    color: #0e171c;
+    display: grid;
+    font: 300 100%/1.5em 'Lato', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    place-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 2em;
+    line-height: 1.25em;
+    margin: .25em 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1em;
+    margin: .33em 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.container {
+    width: 510px;
+}
+
+
+/* ---------- CALENDAR ---------- */
+
+.calendar {
+    text-align: center;
+}
+
+.calendar header {
+    position: relative;
+}
+
+.calendar h2 {
+    text-transform: uppercase;
+}
+
+.calendar thead {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.calendar tbody {
+    color: #7c8a95;
+}
+
+.calendar tbody td:hover {
+    border: 2px solid #7281b3;
+}
+
+.calendar td {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    height: 4em;
+    line-height: 2.5em;
+    text-align: center;
+    width: 4em;
+}
+
+.calendar .prev-month,
+.calendar .next-month {
+    color: #cbd1d2;
+}
+
+.calendar .prev-month:hover,
+.calendar .next-month:hover {
+    border: 2px solid #cbd1d2;
+}
+
+.current-day {
+    background: #7281b3;
+    color: #f9f9f9;
+}
+
+.event {
+    cursor: pointer;
+    position: relative;
+}
+
+.event:after {
+    background: #7281b3;
+    border-radius: 50%;
+    bottom: .5em;
+    display: block;
+    content: '';
+    height: .5em;
+    left: 50%;
+    margin: -.25em 0 0 -.25em;
+    position: absolute;
+    width: .5em;
+}
+
+.event.current-day:after {
+    background: #f9f9f9;
+}
+
+.btn-prev,
+.btn-next {
+    border: 2px solid #cbd1d2;
+    border-radius: 50%;
+    color: #cbd1d2;
+    height: 2em;
+    font-size: .75em;
+    line-height: 1.5em;
+    margin: -1em;
+    position: absolute;
+    top: 50%;
+    width: 2em;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+    background: #cbd1d2;
+    color: #f9f9f9;
+}
+
+.btn-prev {
+    left: 6em;
+}
+
+.btn-next {
+    right: 6em;
+}
+
+.col-xl-8 {
+    margin-left: 15%;
+}
+
+.schedule {
+    margin: 0;
+}
+
+.tabs {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    line-height: 0px;
+    font-size: 0px;
+    background-color: #7281b3;
+    .tab {
+        display: inline-block;
+        width: 33.3333%;
+        background-color: #7281b3;
+        text-align: center;
+        color: #f4f4f6;
+        margin: 0;
+        padding: 0;
+        border: 0px none;
+        line-height: 38px;
+        font-size: 14px;
+        transition: background 0.2s;
+        &.active {
+            background-color: #7281b3;
+            color: #ffffff;
+            font-weight: 600;
+            &:hover {
+                background-color: #fce884;
+            }
+        }
+        &:hover {
+            background-color: #fce884;
+            color: #7281b3;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+    &::after {
+        content: '';
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+.schedule-list {
+    padding: 20px;
+    margin-left: 37px;
+    border-left: 2px solid #cccccc;
+    display: block;
+}
+
+.schedule-item {
+    display: block;
+    margin-bottom: 50px;
+    padding: 0;
+    clear: both;
+    min-height: 100px;
+    overflow: visible;
+    &:last-child {
+        margin-bottom: 10px;
+        min-height: 30px;
+    }
+    .time {
+        display: block;
+        float: left;
+        margin-left: -41px;
+        width: 36px;
+        height: 36px;
+        border: 2px solid #cccccc;
+        background-color: #ffffff;
+        color: #cccccc;
+        border-radius: 40px;
+        text-align: center;
+        padding: 0px;
+        line-height: 25px;
+        span {
+            font-size: 12px;
+            height: 10px;
+            margin: auto;
+            display: block;
+        }
+    }
+    .description {
+        display: block;
+        float: left;
+        width: 305px;
+        margin-top: 10px;
+        margin-left: 10px;
+        color: #1d4efd;
+        font-size: 14px;
+        overflow: visible;
+        .description-content {
+            margin-top: 5px;
+            p {
+                font-size: 12px;
+                margin: 0;
+                color: #c5c5c5;
+            }
+            .contact-list {
+                margin: 0;
+                margin-top: 10px;
+                padding: 0;
+                .contact {
+                    overflow: hidden;
+                    display: block;
+                    float: left;
+                    margin: 0;
+                    padding: 0;
+                    border: 2px solid fadeout(#7281b3, 75%);
+                    border-radius: 60px;
+                    width: 56px;
+                    height: 56px;
+                    text-decoration: none;
+                    text-align: center;
+                    margin-right: 10px;
+                    transition: all 0.2s;
+                    img {
+                        width: 60px;
+                        height: 60px;
+                    }
+                    &:hover {
+                        border: 2px solid #7281b3;
+                    }
+                    &.add-contact {
+                        color: #7281b3;
+                        font-size: 20px;
+                        line-height: 60px;
+                        a {
+                            color: inherit;
+                            text-decoration: none;
+                        }
+                        &:hover {
+                            background-color: fadeout(#7281b3, 75%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.free {
+        .time {
+            border: 2px solid #7281b3;
+        }
+        .description {
+            .description-header {
+                background-color: #ffffff;
+                color: #c5c5c5;
+                display: block;
+                float: left;
+            }
+            .description-content {
+                margin-left: 5px;
+                margin-top: 0;
+                content: '';
+                width: 215px;
+                display: block;
+                float: right;
+                background-image: url(https://dl.dropboxusercontent.com/u/2915418/filler.png);
+                background-repeat: no-repeat;
+                background-position: right center;
+            }
+        }
+    }
+}
+
+h3 {
+    margin: 0 0 10px;
+}
+
+pre {
+    background-color: #f5f5f5;
+    padding: 15px;
+}

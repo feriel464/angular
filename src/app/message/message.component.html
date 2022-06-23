@@ -1,0 +1,164 @@
+<div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
+        <div class="header-body">
+            <!-- Card stats -->
+            <div class="row">
+                <div class="col-xl-3 col-lg-6">
+                    <div class="card card-stats mb-4 mb-xl-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+
+                                    <h5 class="card-title text-uppercase text-muted mb-0">angular</h5>
+                                    <span class="h2 font-weight-bold mb-0">2000  </span>
+                                    <span class="text-nowrap">salaire</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-orange text-white rounded-circle shadow">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0 text-muted text-sm">
+                                <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 40%</span>
+                                <span class="text-nowrap">développeur</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                    <div class="card card-stats mb-4 mb-xl-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Html/CSS</h5>
+                                    <span class="h2 font-weight-bold mb-0">2000  </span>
+                                    <span class="text-nowrap">salaire</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-indigo text-white rounded-circle instagram">
+                                        <i class="fas fa-chart-pie"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0 text-muted text-sm">
+                                <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 30%</span>
+                                <span class="text-nowrap">développeur</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                    <div class="card card-stats mb-4 mb-xl-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Flutter</h5>
+                                    <span class="h2 font-weight-bold mb-0">2500  </span>
+                                    <span class="text-nowrap">salaire</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0 text-muted text-sm">
+                                <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 10%</span>
+                                <span class="text-nowrap">développeur</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                    <div class="card card-stats mb-4 mb-xl-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Performances des développeurs </h5>
+
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                                        <i class="fas fa-percent"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0 text-muted text-sm">
+                                <span class="text-success mr-2"><i class="fas fa-arrow-up">90%</i> </span>
+                                <span class="text-nowrap">dernier mois </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid mt--5">
+
+    <div class="row">
+        <br>
+        <br>
+        <div class="col-xl-8 order-xl-1">
+
+            <div class="card bg-secondary shadow">
+
+                <div class="card-header bg-white border-0">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <h3 class="mb-0">envoyer un message </h3>
+                        </div>
+                        <div class="col-4 text-right">
+                            <button class="btn-anim" type="submit" target="_blank" rel="nofollow noopener">envoyer </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="messForm" (ngSubmit)="onSubmit()">
+
+
+
+                        <!-- Address -->
+
+                        <div class="pl-lg-4">
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-address">À :</label>
+                                        <input id="input-address" type="email" formControlName="email" class="form-control form-control-alternative" placeholder="exemple@gmail.com" type="text">
+                                    </div>
+                                </div>
+                                <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                                    <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+                                    <div *ngIf="f['email'].errors && f['email'].errors['email']">Email must be a valid email address</div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+
+
+                            </div>
+                        </div>
+                        <hr class="my-4" />
+                        <!-- Description -->
+                        <label class="form-control-label" for="input-address">Tapez Votre Message  :</label>
+                        <div class="pl-lg-4">
+                            <div class="form-group">
+
+                                <textarea rows="4" class="form-control form-control-alternative" placeholder="Quelques mots à ecrire ..."></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

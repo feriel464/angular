@@ -1,0 +1,25 @@
+button.btn-anim {
+    height: 50px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(245, 244, 244);
+    color: rgb(252, 250, 250);
+    border-radius: 12px;
+    transition: 0.75s ease-in;
+    margin-left: 20%;
+}
+
+button.btn-anim {
+    background: linear-gradient(to right, #7298b3 25%, 50%, #144fbe 75%) left;
+    background-size: 400%;
+}
+
+button.btn-anim:hover {
+    background-position: right;
+}
+
+.col-xl-8 {
+    margin-left: 15%;
+}
