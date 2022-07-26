@@ -32,18 +32,37 @@ export class LoginComponent  {
   
    
   get f() { return this.loginForm.controls; }
-  onSubmit() {
+  onSubmit(login1) {
+    console.log("login credential ==>", login1.value)
     this.submitted = true;
+    this.dataService.userlogin(login1.value.email,login1.value.password)
+      .pipe(first())
+      .subscribe (
+        data => {
+          console.log("login user ==>", data)
+
+          const redirect = this.dataService.redirectUrl ? this.dataService.redirectUrl : '/dashboard';
+          this.router.navigate([redirect]);
+          },
+  
+          
+        error => {
+        alert("User name or password is incorrect")
+        });
+        
+}
+get email() { return this.loginForm.get('email'); }
+get password() { return this.loginForm.get('password'); }
 
     // stop here if form is invalid
-    if (this.loginForm.invalid) {     
-        return;
-    }
+    //if (this.loginForm.invalid) {     
+       // return;
+   // }
 
     // display form values on success
-    this.router.navigate(['/dashboard']);
+    //this.router.navigate(['/dashboard']);
 }
  
   
 
-}
+//}

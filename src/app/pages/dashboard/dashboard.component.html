@@ -162,78 +162,152 @@
                             <h3 class="mb-0">Visites de pages</h3>
                         </div>
                         <div class="buttons">
-                            <button class="btn-hover color-7">voir tout</button></div>
+
+                            <div class="container">
+
+                                <!--<button class="btn-hover color-7">voir tout</button></div>-->
+                                <a class="button" href="#popup">Editer</a>
+                                <div class="popup" id="popup">
+                                    <div class="popup-inner">
+                                        <div class="row mx-0 auth-wrapper">
+                                            <button class="popup__close" href="#/dashboard" onclick="history.go(-1)">X</button>
+
+                                            <!--remove bg-->
+                                            <ul class="circles">
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                            <div class="d-none d-sm-flex col-sm-6 col-lg-10 align-items-center p-5">
+                                                <div class="align-items-start d-lg-flex flex-column offset-lg-2 text-white">
+                                                    <img src="" class="mb-3">
+                                                    <h1 classname="d-flex"> salut! 👋 il faut modifier</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popup__text">
+                                            <div class="container1">
+                                                <div class="row">
+                                                    <div class=" col-lg-10 col-xl-9 mx-auto ">
+                                                        <h3 class="display-9">Modifier le Tableau!</h3>
+
+                                                        <form>
+                                                            <div class="form-group mb-4">
+
+                                                                <input type="text" placeholder="nom du Developpeur" required="" autofocus="" class="form-control rounded-pill border-9 shadow-sm px-30">
+                                                            </div>
+                                                            <div class="form-group mb-4">
+
+                                                                <input type="text" placeholder="durée" required="" autofocus="" class="form-control rounded-pill border-9 shadow-sm px-30">
+                                                            </div>
+                                                            <div class="form-group mb-4">
+
+                                                                <input type="text" placeholder="Salaires" required="" class="form-control rounded-pill border-9 shadow-sm px-30">
+                                                            </div>
+                                                            <div class="form-group mb-4">
+
+                                                                <input type="text" placeholder="projet" required="" autofocus="" class="form-control rounded-pill border-9 shadow-sm px-30">
+                                                            </div>
+
+                                                            <button type="submit" class="btn btn-primary  rounded-pill shadow-sm">ajouter</button>
+                                                            <button type="submit" class="btn btn-primary  rounded-pill shadow-sm">modifier</button>
+                                                            <button type="submit" class="btn btn-primary  rounded-pill shadow-sm">supprimer</button>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <!-- End -->
+
+                                            </div>
+                                        </div>
+                                        <!-- End -->
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <!-- Projects table -->
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">développeur</th>
+                                    <th scope="col">durée</th>
+                                    <th scope="col">salaire</th>
+                                    <th scope="col">Projet</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        Feriel Remadi
+                                    </th>
+                                    <td>
+                                        4 Jours
+                                    </td>
+                                    <td>
+                                        2100
+                                    </td>
+                                    <td>
+                                        <i class="fas fa-arrow-up text-success mr-3"></i> 4 projet
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        jessica
+                                    </th>
+                                    <td>
+                                        3 Jours
+                                    </td>
+                                    <td>
+                                        3000
+                                    </td>
+                                    <td>
+                                        <i class="fas fa-arrow-down text-warning mr-3"></i> 2 Projet
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        Oussama
+                                    </th>
+                                    <td>
+                                        2 Jours
+                                    </td>
+                                    <td>
+                                        1000
+                                    </td>
+                                    <td>
+                                        <i class="fas fa-arrow-down text-warning mr-3"></i> 1 projet
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="table-responsive">
-                    <!-- Projects table -->
-                    <table class="table align-items-center table-flush">
-                        <thead class="thead-light">
-                            <tr>
-                                <th scope="col">développeur</th>
-                                <th scope="col">durée</th>
-                                <th scope="col">salaire</th>
-                                <th scope="col">Projet</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">
-                                    Feriel Remadi
-                                </th>
-                                <td>
-                                    4 Jours
-                                </td>
-                                <td>
-                                    2100
-                                </td>
-                                <td>
-                                    <i class="fas fa-arrow-up text-success mr-3"></i> 4 projet
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    jessica
-                                </th>
-                                <td>
-                                    3 Jours
-                                </td>
-                                <td>
-                                    3000
-                                </td>
-                                <td>
-                                    <i class="fas fa-arrow-down text-warning mr-3"></i> 2 Projet
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    Oussama
-                                </th>
-                                <td>
-                                    2 Jours
-                                </td>
-                                <td>
-                                    1000
-                                </td>
-                                <td>
-                                    <i class="fas fa-arrow-down text-warning mr-3"></i> 1 projet
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
             </div>
-        </div>
-        <div class="col-xl-4">
-            <div class="card shadow">
-                <div class="card-header border-0">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <h3 class="mb-0">Visiteurs</h3>
+            <br>
+            <div class="col-xl-41">
+                <div class="card shadow">
+                    <div class="card-header border-0">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-0">Visiteurs</h3>
+                            </div>
+                            <div class="buttons">
+                                <button class="btn-hover color-7">voir tout</button></div>
+
                         </div>
-                        <div class="buttons">
-                            <button class="btn-hover color-7">voir tout</button></div>
                     </div>
                 </div>
                 <div class="table-responsive">

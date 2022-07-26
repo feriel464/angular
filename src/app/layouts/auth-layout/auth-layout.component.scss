@@ -57,3 +57,29 @@ body {
     box-shadow: 0 0 5px #5a70fd;
     text-shadow: 0 0 5px #5660f3;
 }
+
+@media (max-width :500px) {
+    .copyright {
+        margin-bottom: 10%;
+    }
+    .col-xl-6>ul {
+        margin-bottom: 30%;
+        margin-left: 0%;
+    }
+}
+
+* {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+ ::-webkit-scrollbar {
+    width: 0px;
+    /* remove scrollbar space /
+    background: transparent; / optional: just make scrollbar invisible /
+    }
+    / optional: show position indicator in red */
+     ::-webkit-scrollbar-thumb {
+        background: #FF0000;
+    }
+}

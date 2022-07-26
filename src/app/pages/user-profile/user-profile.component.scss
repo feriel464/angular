@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Mukta:700');
 $bg: #f3f8fa;
 $white: #fff;
@@ -5,13 +12,17 @@ $black: #f4468c;
 @mixin transition($property: all,
 $duration: 0.45s,
 $ease: cubic-bezier(0.65, 0, .076, 1)) {
+    -webkit-transition: $property $duration $ease;
+    -o-transition: $property $duration $ease;
     transition: $property $duration $ease;
 }
 
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     &::before,
     &::after {
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
 }
@@ -20,8 +31,14 @@ body {
     font-family: 'Mukta', sans-serif;
     font-size: 0.75rem;
     line-height: 1.5;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin: 0;
     min-height: 100vh;
@@ -80,6 +97,8 @@ button {
                         height: 0.625rem;
                         border-top: 0.125rem solid #fff;
                         border-right: 0.125rem solid #fff;
+                        -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
                         transform: rotate(45deg);
                     }
                 }
@@ -109,6 +128,8 @@ button {
             .icon {
                 &.arrow {
                     background: $white;
+                    -webkit-transform: translate(1rem, 0);
+                    -ms-transform: translate(1rem, 0);
                     transform: translate(1rem, 0);
                 }
             }
@@ -121,14 +142,23 @@ button {
 
 @supports (display: grid) {
     body {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 0.625rem 1fr 0.625rem 1fr 0.625rem 1fr;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 0.625rem;
+        -ms-grid-rows: auto 0.625rem auto;
         grid-template-areas: ". main main ." ". main main .";
     }
     #container {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 3;
         grid-area: main;
+        -ms-grid-row-align: center;
         align-self: center;
+        -ms-grid-column-align: center;
         justify-self: center;
     }
 }
@@ -143,6 +173,8 @@ button {
     display: inline-block;
     margin-left: -30%;
     border: none;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 }
 
@@ -150,6 +182,8 @@ button {
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
     -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 }
 
@@ -190,7 +224,10 @@ button {
 }
 
 .btn-hover.color-3 {
+    background-image: -webkit-gradient(linear, left top, right top, from(#ed6ea0), color-stop(#ec8c69), color-stop(#f7186a), to(#FBB03B));
+    background-image: -o-linear-gradient(left, #ed6ea0, #ec8c69, #f7186a, #FBB03B);
     background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a, #FBB03B);
+    -webkit-box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
     box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
 }
 
@@ -225,7 +262,10 @@ button {
 }
 
 .btn-hover1.color-3 {
+    background-image: -webkit-gradient(linear, left top, right top, from(#29323c), color-stop(#485563), color-stop(#2b5876), to(#4e4376));
+    background-image: -o-linear-gradient(left, #29323c, #485563, #2b5876, #4e4376);
     background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    -webkit-box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 
@@ -266,7 +306,10 @@ button {
 }
 
 .btn-hover2.color-3 {
+    background-image: -webkit-gradient(linear, left top, right top, from(#667eea), color-stop(#764ba2), color-stop(#6B8DD6), to(#8E37D7));
+    background-image: -o-linear-gradient(left, #667eea, #764ba2, #6B8DD6, #8E37D7);
     background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    -webkit-box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
     box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
 }
 
@@ -274,4 +317,19 @@ button {
     margin: 0%;
     text-align: center;
     margin-left: -12%;
+}
+
+@media (max-width:500px) {
+    .btn-hover {
+        margin-left: 190%;
+    }
+    .btn-hover2 {
+        margin-left: 20%;
+    }
+    .btn-hover1 {
+        margin-left: 27%;
+    }
+    .example_b {
+        margin-left: 0%;
+    }
 }

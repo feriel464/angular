@@ -25,6 +25,7 @@ $black: #000 !default;
 $grays: () !default;
 $grays: map-merge(( "100": $gray-100, "200": $gray-200, "300": $gray-300, "400": $gray-400, "500": $gray-500, "600": $gray-600, "700": $gray-700, "800": $gray-800, "900": $gray-900), $grays);
 $blue: #5e72e4 !default;
+$mob: #8898aa !default;
 $indigo: #5603ad !default;
 $purple: #8965e0 !default;
 $pink: #f3a4b5 !default;

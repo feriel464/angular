@@ -1,45 +1,39 @@
 //
 // Spacing
 //
-
-.row.row-grid > [class*="col-"] + [class*="col-"] {
+.row.row-grid>[class*="col-"]+[class*="col-"] {
     margin-top: 3rem;
 }
 
 @include media-breakpoint-up(lg) {
-    .row.row-grid > [class*="col-lg-"] + [class*="col-lg-"] {
-        margin-top: 0;
-    }
-}
-@include media-breakpoint-up(md) {
-    .row.row-grid > [class*="col-md-"] + [class*="col-md-"] {
-        margin-top: 0;
-    }
-}
-@include media-breakpoint-up(sm) {
-    .row.row-grid > [class*="col-sm-"] + [class*="col-sm-"] {
+    .row.row-grid>[class*="col-lg-"]+[class*="col-lg-"] {
         margin-top: 0;
     }
 }
 
-.row-grid + .row-grid {
+@include media-breakpoint-up(md) {
+    .row.row-grid>[class*="col-md-"]+[class*="col-md-"] {
+        margin-top: 0;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .row.row-grid>[class*="col-sm-"]+[class*="col-sm-"] {
+        margin-top: 0;
+    }
+}
+
+.row-grid+.row-grid {
     margin-top: 3rem;
 }
 
-
 // Negative margins and paddings
-
 @media(min-width: 992px) {
     [class*="mt--"],
     [class*="mr--"],
     [class*="mb--"],
-    [class*="ml--"] {
-        
-    }
-
-
+    [class*="ml--"] {}
     // Large negative margins in pixels
-
     .mt--100 {
         margin-top: -100px !important;
     }
@@ -70,10 +64,12 @@
     .mb--300 {
         margin-bottom: -300px !important;
     }
-
-
+    .mt-5 {
+        margin-top: 3rem !important;
+        margin-left: 1%;
+        margin-right: -44%;
+    }
     // Large margins in pixels
-
     .pt-100 {
         padding-top: 100px !important;
     }

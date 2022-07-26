@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthguardGuard } from 'src/app/authguard.guard';
 
 
 declare interface RouteInfo {
@@ -10,7 +11,7 @@ declare interface RouteInfo {
     
 }
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',class:'', icon: 'ni-tv-2 text-primary'},
+    { path: '/dashboard', title: 'Dashboard',class:'', icon: 'ni-tv-2 text-primary' },
    
     { path: '/calendrier', title: 'Calendrier', class: '', icon: 'ni-calendar-grid-58' },
     { path: '/user-profile', title: 'User profile',   class: '', icon: 'ni-single-02 text-yellow' },

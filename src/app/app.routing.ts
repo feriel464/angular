@@ -9,7 +9,8 @@ import { MessageComponent } from './message/message.component';
 
 import { CalendrierComponent } from './calendrier/calendrier.component';
 
-
+import { AuthguardGuard } from './authguard.guard';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 
 const routes: Routes =[
@@ -17,7 +18,7 @@ const routes: Routes =[
     path: '',
     redirectTo: 'login',
     pathMatch: 'full',
-  },  {
+  }, {
     path: '',
     component: AdminLayoutComponent,
     children: [

@@ -1,13 +1,29 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @supports (display: grid) {
     body {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 0.600rem 1fr 0.600rem 1fr 0.600rem 1fr;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 0.600rem;
+        -ms-grid-rows: auto 0.600rem auto;
         grid-template-areas: ". main main ." ". main main .";
     }
     #container {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 3;
         grid-area: main;
+        -ms-grid-row-align: center;
         align-self: center;
+        -ms-grid-column-align: center;
         justify-self: center;
     }
 }
@@ -21,6 +37,8 @@
     border-radius: 10px;
     display: inline-block;
     border: none;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 }
 
@@ -28,17 +46,23 @@
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
     -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 }
 
 .btn-one {
     color: #FFF;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     position: relative;
     margin-left: 1%;
 }
 
 .btn-one span {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -51,6 +75,8 @@
     height: 100%;
     z-index: 1;
     opacity: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     border-top-width: 1px;
     border-bottom-width: 1px;
@@ -58,6 +84,8 @@
     border-bottom-style: solid;
     border-top-color: rgba(255, 255, 255, 0.5);
     border-bottom-color: rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale(0.1, 1);
+    -ms-transform: scale(0.1, 1);
     transform: scale(0.1, 1);
 }
 
@@ -67,6 +95,8 @@
 
 .btn-one:hover::before {
     opacity: 1;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
     transform: scale(1, 1);
 }
 
@@ -78,23 +108,31 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-one:hover::after {
     opacity: 0;
+    -webkit-transform: scale(0.1, 1);
+    -ms-transform: scale(0.1, 1);
     transform: scale(0.1, 1);
 }
 
 .btn-2 {
     color: #FFF;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     position: relative;
     margin-left: 1%;
 }
 
 .btn-2 span {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -107,6 +145,8 @@
     height: 100%;
     z-index: 1;
     opacity: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     border-top-width: 1px;
     border-bottom-width: 1px;
@@ -114,6 +154,8 @@
     border-bottom-style: solid;
     border-top-color: rgba(255, 255, 255, 0.5);
     border-bottom-color: rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale(0.1, 1);
+    -ms-transform: scale(0.1, 1);
     transform: scale(0.1, 1);
 }
 
@@ -123,6 +165,8 @@
 
 .btn-2:hover::before {
     opacity: 1;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
     transform: scale(1, 1);
 }
 
@@ -134,12 +178,16 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-2:hover::after {
     opacity: 0;
+    -webkit-transform: scale(0.1, 1);
+    -ms-transform: scale(0.1, 1);
     transform: scale(0.1, 1);
 }
 
@@ -156,4 +204,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 .col-6 {
     margin-left: 47%;
+}
+
+@media (max-width :500px) {
+    .card-header>span {
+        font-size: 30px;
+    }
 }

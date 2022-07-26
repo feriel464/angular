@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
 
 /* Base styling */
@@ -25,7 +32,11 @@ body {
         width: 22%;
         padding: 12px 24px;
         background-color: transparent;
+        -webkit-transition: -webkit-transform 250ms ease-in-out;
+        transition: -webkit-transform 250ms ease-in-out;
+        -o-transition: transform 250ms ease-in-out;
         transition: transform 250ms ease-in-out;
+        transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
         font-size: 13px;
         line-height: 18px;
         color: #021141;
@@ -37,9 +48,33 @@ body {
         background-position: 95% center;
         border-radius: 50px;
         border: 2px solid #32325d;
+        -webkit-transition: all 250ms ease-in-out;
+        -o-transition: all 250ms ease-in-out;
         transition: all 250ms ease-in-out;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+        -webkit-transform-style: preserve-3d;
         transform-style: preserve-3d;
+        &::-webkit-input-placeholder {
+            color: color(#32325d a(0.8));
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        &::-moz-placeholder {
+            color: color(#32325d a(0.8));
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        &:-ms-input-placeholder {
+            color: color(#32325d a(0.8));
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        &::-ms-input-placeholder {
+            color: color(#32325d a(0.8));
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
         &::placeholder {
             color: color(#32325d a(0.8));
             text-transform: uppercase;
@@ -69,6 +104,8 @@ body {
     &__link {
         color: #ff8b88;
         text-decoration: none;
+        -webkit-transition: color 250ms ease-in;
+        -o-transition: color 250ms ease-in;
         transition: color 250ms ease-in;
         &:hover,
         &:focus {
@@ -100,7 +137,11 @@ body {
         width: 22%;
         padding: 12px 24px;
         background-color: transparent;
+        -webkit-transition: -webkit-transform 250ms ease-in-out;
+        transition: -webkit-transform 250ms ease-in-out;
+        -o-transition: transform 250ms ease-in-out;
         transition: transform 250ms ease-in-out;
+        transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
         font-size: 13px;
         line-height: 18px;
         color: #eff0f3;
@@ -112,9 +153,33 @@ body {
         background-position: 95% center;
         border-radius: 50px;
         border: 2px solid #f9f9f9;
+        -webkit-transition: all 250ms ease-in-out;
+        -o-transition: all 250ms ease-in-out;
         transition: all 250ms ease-in-out;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+        -webkit-transform-style: preserve-3d;
         transform-style: preserve-3d;
+        &::-webkit-input-placeholder {
+            color: color(#f9f9f3 a(0.8));
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        &::-moz-placeholder {
+            color: color(#f9f9f3 a(0.8));
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        &:-ms-input-placeholder {
+            color: color(#f9f9f3 a(0.8));
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        &::-ms-input-placeholder {
+            color: color(#f9f9f3 a(0.8));
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
         &::placeholder {
             color: color(#f9f9f3 a(0.8));
             text-transform: uppercase;
@@ -144,6 +209,8 @@ body {
     &__link {
         color: #ff8b88;
         text-decoration: none;
+        -webkit-transition: color 250ms ease-in;
+        -o-transition: color 250ms ease-in;
         transition: color 250ms ease-in;
         &:hover,
         &:focus {
@@ -170,7 +237,11 @@ body {
         }
     }
     .table-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
     .p-calendar .p-datepicker {
@@ -236,5 +307,29 @@ body {
                 }
             }
         }
+    }
+}
+
+@media (max-width:500px) {
+    .search__input,
+    .search__input1 {
+        width: 44%;
+        margin-left: 60%;
+    }
+}
+
+* {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+ ::-webkit-scrollbar {
+    width: 0px;
+    /* remove scrollbar space /
+    background: transparent; / optional: just make scrollbar invisible /
+    }
+    / optional: show position indicator in red */
+     ::-webkit-scrollbar-thumb {
+        background: #FF0000;
     }
 }
